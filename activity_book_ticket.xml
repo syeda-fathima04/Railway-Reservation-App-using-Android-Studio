@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookTicketActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="415dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Railway Image"
+        app:layout_constraintBottom_toTopOf="@+id/autoCompleteTrain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/train_600nw_104147417" />
+
+    <!-- Train Name/Number AutoComplete TextView -->
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTrain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter Train Name/Number"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <!-- Travel Date TextView -->
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="137dp"
+        android:text="Select Travel Date"
+        app:layout_constraintEnd_toStartOf="@+id/btnDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTrain" />
+
+    <!-- Date Picker Button -->
+    <ImageButton
+        android:id="@+id/btnDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Select Date"
+        android:src="@android:drawable/ic_menu_today"
+        app:layout_constraintBottom_toTopOf="@+id/etPassengers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvSelectedDate"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTrain" />
+
+    <!-- Number of Passengers Input -->
+    <EditText
+        android:id="@+id/etPassengers"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter Number of Passengers"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/etName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDate" />
+
+    <!-- Name Input -->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter Your Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassengers" />
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter Your Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/etPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <!-- Phone Number Input -->
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Enter Your Phone Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/btnBookTicket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <!-- Book Ticket Button -->
+    <Button
+        android:id="@+id/btnBookTicket"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Book Ticket"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewTickets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+    <!-- View Tickets Button -->
+
+    <!-- Back to Home Button -->
+
+    <Button
+        android:id="@+id/btnViewTickets"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="3dp"
+        android:text="View Tickets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnBackToHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBookTicket" />
+
+    <!-- Confirmation TextView -->
+
+    <Button
+        android:id="@+id/btnBackToHome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="3dp"
+        android:text="Back to Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnViewTickets"
+        app:layout_constraintTop_toTopOf="@+id/btnViewTickets" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
